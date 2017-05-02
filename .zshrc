@@ -79,6 +79,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# added by travis gem
-[ -f /Users/olle/.travis/travis.sh ] && source /Users/olle/.travis/travis.sh
