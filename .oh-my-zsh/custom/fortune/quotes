@@ -10,3 +10,9 @@ Let data be data. Let actions be actions.
 [Being] a good programmer is like [being a] good driver.
 Don't crash and make your intentions obvious.
 	— @dunno_someguy
+%
+As the number of dimension grow, the amount of data needed to generalize accurately grows exponentially.
+	- (The Curse of Dimensionality)
+%
+Before software can be reusable it first has to be usable.
+	– Ralph Johnson
