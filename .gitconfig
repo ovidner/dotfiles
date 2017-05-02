@@ -11,6 +11,7 @@
 	signingkey = B8587C9F
 [commit]
 	gpgsign = true
+	template = /Users/olle/.gitcommitmsg
 [credential]
 	helper = osxkeychain
 [gpg]
