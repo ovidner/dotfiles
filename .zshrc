@@ -50,8 +50,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(git terminalapp virtualenvwrapper brew sudo pip npm docker docker-compose)
 
 # User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/usr/local/opt/android-sdk/tools/:/usr/local/opt/android-sdk/platform-tools:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+export PATH="/usr/local/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -80,7 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/sbin:$PATH"
 
 # added by travis gem
 [ -f /Users/olle/.travis/travis.sh ] && source /Users/olle/.travis/travis.sh
