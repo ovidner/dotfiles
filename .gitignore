@@ -1,0 +1,14 @@
+# Ignore everything (for performance reasons)...
+*
+# ...except the things we care about
+!.gitcommitmsg
+!.gitconfig
+!.gitignore
+!.gitignore_global
+!.gnupg/gpg.conf
+!.gnupg/gpg-agent.conf
+!.hushlogin
+!.zshrc
+!.oh-my-zsh/custom/*
+!Library/Application Support/Code/User/settings.json
+!Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts/*
