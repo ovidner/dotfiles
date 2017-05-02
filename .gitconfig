@@ -1,0 +1,23 @@
+[core]
+	editor = code --wait
+	excludesfile = /Users/olle/.gitignore_global
+[diff]
+	tool = code
+[difftool "code"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+[user]
+	name = Olle Vidner
+	email = olle@vidner.se
+	signingkey = B8587C9F
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+[gpg]
+	program = gpg
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
