@@ -1,4 +1,14 @@
 {
+  // Extensions
+  "docker.enableLinting": true,
+  "python.venvPath": "${env.HOME}/.virtualenvs",
+
+  // Languages
+  "[python]": {
+    "editor.tabSize": 4
+  },
+
+  // General
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
@@ -28,13 +38,4 @@
   "files.trimTrailingWhitespace": true,
   "search.useIgnoreFilesByDefault": true,
   "workbench.iconTheme": "vs-seti",
-
-  // Extensions
-  "docker.enableLinting": true,
-  "python.venvPath": "${env.HOME}/.virtualenvs",
-
-  // Languages
-  "[python]": {
-    "editor.tabSize": 4
-  }
 }
