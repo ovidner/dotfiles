@@ -11,6 +11,9 @@
     120
   ],
   "extensions.autoUpdate": true,
+  "files.associations": {
+    "*.sls": "yaml"
+  },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
     "**/.git": true,
