@@ -36,6 +36,7 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.confirmSync": false,
   "search.useIgnoreFilesByDefault": true,
   "workbench.iconTheme": "vs-seti",
 }
