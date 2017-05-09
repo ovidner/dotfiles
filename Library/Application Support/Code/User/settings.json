@@ -38,5 +38,6 @@
   "files.trimTrailingWhitespace": true,
   "git.confirmSync": false,
   "search.useIgnoreFilesByDefault": true,
+  "window.reopenFolders": "all",
   "workbench.iconTheme": "vs-seti",
 }
