@@ -10,5 +10,7 @@
 !.hushlogin
 !.zshrc
 !.oh-my-zsh/custom/*
+!bin
+!bin/*
 !Library/Application Support/Code/User/settings.json
 !Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts/*
