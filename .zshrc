@@ -45,10 +45,11 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git terminalapp virtualenvwrapper brew sudo pip npm docker docker-compose)
+plugins=(git terminalapp virtualenvwrapper brew sudo pip npm docker docker-compose fzf)
 
 # User configuration
 export PATH="/usr/local/sbin:$PATH"
+export FZF="/usr/local/opt/fzf"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
