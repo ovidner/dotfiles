@@ -9,7 +9,8 @@
 !.gnupg/gpg-agent.conf
 !.hushlogin
 !.zshrc
-!.oh-my-zsh/custom/*
+!.oh-my-zsh-custom
+!.oh-my-zsh-custom/**/*
 !bin
 !bin/*
 !Library/Application Support/Code/User/settings.json
