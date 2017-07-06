@@ -8,6 +8,8 @@
 !.gnupg/gpg.conf
 !.gnupg/gpg-agent.conf
 !.hushlogin
+!.ssh
+!.ssh/config
 !.zshrc
 !.oh-my-zsh-custom
 !.oh-my-zsh-custom/**/*
