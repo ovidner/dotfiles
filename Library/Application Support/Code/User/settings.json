@@ -8,12 +8,17 @@
     "editor.tabSize": 4
   },
 
+  // Workaround for https://github.com/Microsoft/vscode/issues/25934
+  "editor.disableTranslate3d": true,
+  "window.zoomLevel": 0,
+  "editor.minimap.enabled": false,
+
   // General
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
   "editor.lineNumbers": "on",
-  "editor.minimap.enabled": true,
+  // "editor.minimap.enabled": true,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "editor.rulers": [
