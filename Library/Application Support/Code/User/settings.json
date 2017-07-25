@@ -14,11 +14,13 @@
   "editor.minimap.enabled": false,
 
   // General
+  "editor.autoIndent": true,
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
   "editor.lineNumbers": "on",
   // "editor.minimap.enabled": true,
+  "editor.renderIndentGuides": false,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "editor.rulers": [
@@ -44,5 +46,7 @@
   "git.confirmSync": false,
   "search.useIgnoreFilesByDefault": true,
   "window.reopenFolders": "all",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vs-seti",
+  "workbench.welcome.enabled": true,
 }
