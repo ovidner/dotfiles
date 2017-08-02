@@ -51,7 +51,6 @@ plugins=(git terminalapp virtualenvwrapper brew sudo pip npm docker docker-compo
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export FZF="/usr/local/opt/fzf"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
