@@ -51,6 +51,15 @@ plugins=(git terminalapp virtualenvwrapper brew sudo pip npm docker docker-compo
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export FZF="/usr/local/opt/fzf"
+export CODE=~/Code
+
+# virtualenvwrapper
+# VIRTUALENVWRAPPER_PYTHON defaults to `python`, which points to the *system*
+# python and not Homebrew. We must set this before initializing oh-my-zsh to
+# avoid ugly errors.
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+export PROJECT_HOME=$CODE
+export WORKON_HOME=~/.virtualenvs
 
 source $ZSH/oh-my-zsh.sh
 
