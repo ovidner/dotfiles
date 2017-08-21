@@ -8,7 +8,7 @@
 [user]
 	name = Olle Vidner
 	email = olle@vidner.se
-	signingkey = 9D6C10A043C9CEAB0797AA09EE8EE46FB8587C9F
+	signingkey = 3AA3BFA4EBE9893D
 [commit]
 	gpgsign = true
 	template = ~/.gitcommitmsg
