@@ -30,3 +30,7 @@
 [alias]
 	fpush = push --force-with-lease
 	remaster = "!git fetch; git rebase origin/master"
+[rebase]
+	autostash = true
+[pull]
+	rebase = true
