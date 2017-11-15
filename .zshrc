@@ -47,39 +47,16 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git terminalapp brew sudo pip yarn pyenv docker docker-compose fzf)
 
-# User configuration
-export PATH="/usr/local/sbin:$PATH"
-# Prefer Homebrew gettext
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export FZF="/usr/local/opt/fzf"
-export CODE=~/Code
+# Only set PATH for login sessions (i.e. don't mess up the PATH for subshells)
+if [[ -o login ]]; then
+  export PATH="/usr/local/sbin:$PATH"
+  # Prefer Homebrew gettext
+  export PATH="/usr/local/opt/gettext/bin:$PATH"
+  # Add scripts installed by `pip install --user ...` to PATH
+  export PATH="$HOME/.local/bin:$PATH"
+fi
 
-# pipsi
-export PATH="$HOME/.local/bin:$PATH"
+export CODE="$HOME/Code"
+export FZF="/usr/local/opt/fzf"
 
 source $ZSH/oh-my-zsh.sh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
