@@ -1,33 +1,33 @@
 {
   // Extensions
   "docker.enableLinting": true,
-  "python.venvPath": "${env:HOME}/.virtualenvs",
+  "gitlens.codeLens.enabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "~/.local/bin/flake8",
+  "python.venvPath": "~/.local/share/virtualenvs",
 
   // Languages
   "[python]": {
     "editor.tabSize": 4
   },
 
-  // Workaround for https://github.com/Microsoft/vscode/issues/25934
-  "editor.disableTranslate3d": true,
-  "window.zoomLevel": 0,
-  "editor.minimap.enabled": false,
-
   // General
-  "editor.autoIndent": true,
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
-  "editor.fontFamily": "SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'RobotoMono-Light', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 11,
   "editor.lineNumbers": "on",
-  // "editor.minimap.enabled": true,
-  "editor.renderIndentGuides": false,
+  "editor.minimap.enabled": true,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "editor.rulers": [
     80,
-    120
+    100,
   ],
   "extensions.autoUpdate": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.sls": "yaml"
   },
@@ -45,8 +45,11 @@
   "files.trimTrailingWhitespace": true,
   "git.confirmSync": false,
   "search.useIgnoreFilesByDefault": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.fontSize": 11,
   "window.reopenFolders": "all",
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vs-seti",
   "workbench.welcome.enabled": true,
+  "workbench.panel.location": "bottom",
 }
