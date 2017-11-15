@@ -29,3 +29,4 @@
 	trustExitCode = true
 [alias]
 	fpush = push --force-with-lease
+	remaster = "!git fetch; git rebase origin/master"
