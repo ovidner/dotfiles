@@ -29,7 +29,10 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.sls": "yaml"
+    "Pipfile": "toml",
+    "Pipfile.lock": "json",
+    "Saltfile": "yaml",
+    "*.sls": "yaml",
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
