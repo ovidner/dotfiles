@@ -6,7 +6,7 @@ export ZSH_CUSTOM=~/.oh-my-zsh-custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="risto"
+ZSH_THEME="ovidner"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,7 +45,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git terminalapp brew sudo pip yarn pyenv docker docker-compose fzf)
+plugins=(git terminalapp brew sudo pip yarn pyenv docker docker-compose fzf virtualenv)
 
 # Only set PATH for login sessions (i.e. don't mess up the PATH for subshells)
 if [[ -o login ]]; then
