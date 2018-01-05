@@ -1,1 +1,3 @@
-print "\e[35m`fortune $ZSH_CUSTOM/fortune/`\n"
+if [[ -o login ]]; then
+  print "\e[35m`fortune $ZSH_CUSTOM/fortune/`\n"
+fi
