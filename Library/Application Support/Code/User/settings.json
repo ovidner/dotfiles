@@ -2,6 +2,7 @@
   // Extensions
   "docker.enableLinting": true,
   "gitlens.codeLens.enabled": false,
+  "gitlens.keymap": "chorded",
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Path": "~/.local/bin/flake8",
@@ -18,7 +19,7 @@
   "editor.fontFamily": "'RobotoMono-Light', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 11,
   "editor.lineNumbers": "on",
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
   "editor.rulers": [
