@@ -32,6 +32,8 @@
     "Pipfile": "toml",
     "Pipfile.lock": "json",
     "Saltfile": "yaml",
+    "*.env": "shellscript",
+    "*.envrc": "shellscript",
     "*.sls": "yaml",
   },
   "files.autoSave": "onFocusChange",
