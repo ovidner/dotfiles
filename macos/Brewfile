@@ -1,0 +1,31 @@
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "caskroom/cask"
+brew "arping"
+brew "chromedriver"
+brew "curl"
+brew "direnv"
+brew "gettext"
+brew "git"
+brew "git-annex"
+brew "git-lfs"
+brew "fish"
+brew "fzf"
+brew "openssl"
+brew "gitlab-runner", restart_service: true
+brew "gnupg"
+brew "hping"
+brew "libmagic"
+brew "libu2f-host"
+brew "pinentry-mac"
+brew "pipenv"
+brew "postgresql", restart_service: true
+brew "pyenv"
+brew "redis", restart_service: true
+brew "ruby"
+brew "syncthing", restart_service: true
+brew "syncthing-inotify", restart_service: true
+brew "tig"
+brew "watch"
+brew "yarn"
