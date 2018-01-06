@@ -26,4 +26,6 @@
     ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts: msoffice/font-themes
 
 - shell:
+    - fisher
     - fisher ~/.dotfiles/shell/fisher-plugins/ovidner
+    - fisher up
