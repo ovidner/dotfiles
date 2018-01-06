@@ -1,0 +1,23 @@
+# Dotbot config (https://github.com/anishathalye/dotbot/)
+# Note the indentation levels!
+
+- defaults:
+    link:
+      force: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitcommitmsg: git/.gitcommitmsg
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
+    ~/.gnupg/gpg.conf: gnupg/gpg.conf
+    ~/.hushlogin: shell/.hushlogin
+    ~/.local/bin/git-gpg: bin/git-gpg
+    ~/.oh-my-zsh-custom: shell/.oh-my-zsh-custom
+    ~/.ssh/config: ssh/config
+    ~/.zshrc: shell/.zshrc
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts: msoffice/font-themes
