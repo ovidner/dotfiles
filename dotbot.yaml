@@ -9,7 +9,6 @@
 - clean: ['~']
 
 - link:
-    ~/.config/fish/config.fish: shell/config.fish
     ~/.config/fish/fishfile: shell/fishfile
     ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg
