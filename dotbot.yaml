@@ -5,6 +5,10 @@
     link:
       create: true
       relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
