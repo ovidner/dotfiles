@@ -9,6 +9,8 @@
 - clean: ['~']
 
 - link:
+    ~/.config/fish/config.fish: shell/config.fish
+    ~/.config/fish/fishfile: shell/fishfile
     ~/.gitcommitmsg: git/.gitcommitmsg
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
