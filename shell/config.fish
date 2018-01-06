@@ -16,7 +16,7 @@ function fish_prompt
   test "$USER" = 'root'
   and echo -n (set_color red)'# '
 
-	test $SSH_TTY
+  test $SSH_TTY
   and printf (set_color red)$USER(set_color brwhite)'@'(set_color yellow)(prompt_hostname)' '
 
   echo -n (set_color green)(prompt_pwd)(set_color normal)' '
@@ -42,7 +42,9 @@ end
 function fish_title
   test $SSH_TTY
   and echo -n $USER'@'(prompt_hostname)' '
+
   echo -n (prompt_pwd)' '
+
   test $argv
   and echo -n '🚂'$argv
 end
