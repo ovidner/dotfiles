@@ -27,9 +27,6 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[alias]
-	fpush = push --force-with-lease
-	remaster = "!git fetch; git rebase origin/master"
 [rebase]
 	autostash = true
 [pull]
