@@ -11,6 +11,7 @@
 - link:
     ~/.config/fish/config.fish: shell/config.fish
     ~/.config/fish/fishfile: shell/fishfile
+    ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
@@ -24,3 +25,6 @@
     ~/.zshrc: shell/.zshrc
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts: msoffice/font-themes
+
+- shell:
+    - fisher ~/.dotfiles/shell/fisher-plugins/ovidner
