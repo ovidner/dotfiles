@@ -13,7 +13,6 @@
 - clean: ['~']
 
 - link:
-    ~/.Brewfile: macos/Brewfile
     ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg
     ~/.gitconfig: git/.gitconfig
