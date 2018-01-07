@@ -13,7 +13,6 @@
 - clean: ['~']
 
 - link:
-    ~/.config/fish/fishfile: shell/fishfile
     ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg
     ~/.gitconfig: git/.gitconfig
@@ -31,4 +30,4 @@
 
 - shell:
     - fish -c "if [ ! -f ~/.config/fish/functions/fisher.fish ]; curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher; end"
-    - fish -c "fisher; fisher ~/.dotfiles/shell/fisher-plugins/ovidner; fisher up"
+    - fish -c "fisher ~/.dotfiles/shell/fisher-plugins/ovidner"
