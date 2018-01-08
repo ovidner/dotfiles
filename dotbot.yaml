@@ -20,7 +20,6 @@
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
     ~/.hushlogin: shell/.hushlogin
-    ~/.iterm: iterm
     ~/.oh-my-zsh-custom: shell/.oh-my-zsh-custom
     ~/.ssh/config: ssh/config
     ~/.zshrc: shell/.zshrc
