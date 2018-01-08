@@ -11,6 +11,7 @@ if status --is-login
   set -x PATH /usr/local/sbin $PATH
   set -x PATH /usr/local/opt/gettext/bin $PATH
   set -x PATH $HOME/.local/bin $PATH
+  set -x PATH $HOME/.dotfiles/bin $PATH
 end
 
 if status --is-interactive

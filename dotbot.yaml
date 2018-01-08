@@ -21,7 +21,6 @@
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
     ~/.hushlogin: shell/.hushlogin
     ~/.iterm: iterm
-    ~/.local/bin/git-gpg: bin/git-gpg
     ~/.oh-my-zsh-custom: shell/.oh-my-zsh-custom
     ~/.ssh/config: ssh/config
     ~/.zshrc: shell/.zshrc
