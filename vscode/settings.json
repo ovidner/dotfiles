@@ -16,7 +16,8 @@
   // General
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
-  "editor.fontFamily": "'RobotoMono-Light', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.fontSize": 11,
   "editor.lineNumbers": "on",
   "editor.minimap.enabled": false,
