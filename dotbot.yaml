@@ -26,7 +26,6 @@
     ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts: msoffice/font-themes
 
 - shell:
-    - bash -c 'if ! [ -x "$(command -v brew)" ]; then curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | /usr/bin/ruby; fi'
-    - brew bundle --global
-    - fish -c "if [ ! -f ~/.config/fish/functions/fisher.fish ]; curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher; end"
-    - fish -c "fisher ~/.dotfiles/shell/fisher-plugins/ovidner"
+    # $PWD for these scripts is always the canonical path to the dotfiles root
+    - macos/setup-brew
+    - shell/setup-fish
