@@ -7,6 +7,9 @@ function ovidner_abbreviations
     gca=git commit --amend
     gco=git checkout
     gfp=git push --force-with-lease
+    grb=git rebase
+    grba=git rebase --abort
+    grbc=git rebase --continue
     grbi=git rebase -i HEAD~8
     grbm=git fetch; git rebase origin/master
     gs=git stash
