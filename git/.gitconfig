@@ -4,6 +4,7 @@
 [core]
 	editor = code --wait
 	excludesfile = ~/.gitignore_global
+	pager = cat
 [credential]
 	helper = osxkeychain
 [diff]
