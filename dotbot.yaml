@@ -27,5 +27,7 @@
 
 - shell:
     # $PWD for these scripts is always the canonical path to the dotfiles root
+    - macos/setup-fs-flags
+    - macos/setup-system
     - macos/setup-brew
     - shell/setup-fish

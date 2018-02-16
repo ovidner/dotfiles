@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+chflags nohidden ~/Library
+sudo chflags nohidden /Volumes
