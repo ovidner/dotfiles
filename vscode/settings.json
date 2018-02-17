@@ -27,6 +27,7 @@
   },
 
   // General
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
