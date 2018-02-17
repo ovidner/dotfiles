@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+set -ef
 
-set -e
+# Preemptively asks for sudo and keeps the session for as long as we're running.
+# Credit: https://gist.github.com/cowboy/3118588
+sudo -v -p "We need sudo to perform certain tasks. Please authenticate [$(whoami)]: "
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 CONFIG="dotbot.yaml"
 DOTBOT_DIR="_vendor/dotbot"
