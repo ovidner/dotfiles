@@ -31,3 +31,4 @@
     - macos/setup-system
     - macos/setup-brew
     - shell/setup-fish
+    - vscode/setup

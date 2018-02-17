@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+set BASEDIR (dirname (status --current-filename))
+
+ln -sf /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
+
+code (grep -vE "^\s*#" $BASEDIR/extensions | sed -E "s/(.*)/--install-extension \1/")
