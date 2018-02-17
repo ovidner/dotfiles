@@ -3,6 +3,17 @@
   "docker.enableLinting": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.keymap": "chorded",
+  "latex-workshop.latex.toolchain": [
+    {
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    }
+  ],
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Path": "~/.local/bin/flake8",
