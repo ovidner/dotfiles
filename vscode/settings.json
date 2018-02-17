@@ -2,6 +2,8 @@
   // Extensions
   "docker.enableLinting": true,
   "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false,
   "gitlens.keymap": "chorded",
   "latex-workshop.latex.toolchain": [
     {
