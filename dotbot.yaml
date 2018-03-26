@@ -13,6 +13,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/karabiner: karabiner
     ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg
     ~/.gitconfig: git/.gitconfig
