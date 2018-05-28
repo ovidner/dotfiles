@@ -5,8 +5,9 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.enabled": false,
   "gitlens.keymap": "chorded",
-  "latex-workshop.latex.toolchain": [
+  "latex-workshop.latex.tools": [
     {
+      "name": "latexmk",
       "command": "latexmk",
       "args": [
         "-synctex=1",
