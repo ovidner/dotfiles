@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+beets = "*"
+beets-alternatives = {git = "https://github.com/wisp3rwind/beets-alternatives.git", ref = "331eb406786a2d4dc3dd721a534225b087474b1e"}
+discogs-client = "*"
+pyacoustid = "*"
+requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

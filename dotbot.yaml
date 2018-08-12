@@ -13,6 +13,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/beets/config.yaml: beets/config.yaml
     ~/.config/karabiner: karabiner
     ~/.dotfiles: ''
     ~/.gitcommitmsg: git/.gitcommitmsg

@@ -1,0 +1,62 @@
+include:
+  - ~/Music/Library/.beets-secrets.yaml
+
+directory: ~/Music/Library
+library: ~/Music/Library/beets.db
+paths:
+    default: $albumartist/$album%aunique{}/$disc-$track $title
+    singleton: _Singletons/$artist/$title
+    comp: _Compilations/$album%aunique{}/$disc-$track $title
+
+per_disc_numbering: true
+match:
+  preferred:
+    original_year: true
+
+languages:
+  - en
+  - sv
+
+plugins:
+  - alternatives
+  - badfiles
+  - chroma
+  - discogs
+  - duplicates
+  - edit
+  - embedart
+  - fetchart
+  - fromfilename
+  - mbsubmit
+  - mbsync
+  - types
+
+types:
+  bad_tags: bool
+  # rip_author: str
+  rip_ok: bool
+
+convert:
+  format: aac
+  formats:
+    # http://ffmpeg.org/ffmpeg-codecs.html#aac
+    aac:
+      command: ffmpeg -i $source -y -c:v copy -c:a aac -q:a 4 $dest
+      extension: m4a
+    # http://ffmpeg.org/ffmpeg-codecs.html#Options-14
+    # https://wiki.hydrogenaud.io/index.php?title=Recommended_Ogg_Vorbis
+    ogg: ffmpeg -i $source -y -c:a libvorbis -q:a 8 $dest
+
+edit:
+  itemfields: disc track title artist album
+  albumfields: albumartist album
+
+alternatives:
+  rips:
+    directory: ../Rips
+    formats: link
+    query: rip_author:'Olle Vidner' rip_ok:true
+  transcodes:
+    directory: _Transcodes
+    formats: aac
+    query: format:flac
