@@ -1,6 +1,7 @@
 set fish_greeting
 set -gx fish_user_abbreviations (ovidner_abbreviations)
 set -x CODE $HOME/Code
+set -x EDITOR "code --wait"
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x PIPENV_SHELL_FANCY true

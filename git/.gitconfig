@@ -2,7 +2,6 @@
 	gpgsign = true
 	template = ~/.gitcommitmsg
 [core]
-	editor = code --wait
 	excludesfile = ~/.gitignore_global
 	pager = cat
 [credential]
