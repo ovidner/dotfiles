@@ -23,6 +23,7 @@
     ~/.hushlogin: shell/.hushlogin
     ~/.latexmkrc: latex/.latexmkrc
     ~/.ssh/config: ssh/config
+    ~/.util-pipenvs: util-pipenvs
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Themes.localized/Theme Fonts: msoffice/font-themes
 
