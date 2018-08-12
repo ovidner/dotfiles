@@ -1,0 +1,11 @@
+#!/bin/sh
+pyenv rehash
+
+PYTHON27="$(pyenv install -l | grep -e '2.7.[0-9]*$' | grep -v - | tail -1)"
+PYTHON36="$(pyenv install -l | grep -e '3.6.[0-9]*$' | grep -v - | tail -1)"
+PYTHON37="$(pyenv install -l | grep -e '3.7.[0-9]*$' | grep -v - | tail -1)"
+
+pyenv install -s $PYTHON27
+pyenv install -s $PYTHON36
+pyenv install -s $PYTHON37
+pyenv global $PYTHON37 $PYTHON27

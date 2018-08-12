@@ -34,3 +34,4 @@
     - macos/setup-brew
     - shell/setup-fish
     - vscode/setup
+    - bin/config-pyenv
