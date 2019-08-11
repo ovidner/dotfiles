@@ -9,15 +9,23 @@ paths:
     comp: _Compilations/$album%aunique{}/$disc-$track $title
 
 per_disc_numbering: true
+artist_credit: true
 match:
   preferred:
-    original_year: true
+    countries:
+      - SE
+      - DE
+      - US
+      - GB|UK
+    # original_year: true
 
 languages:
   - en
   - sv
 
 plugins:
+  - absubmit
+  - acousticbrainz
   - alternatives
   - badfiles
   - chroma
@@ -27,21 +35,32 @@ plugins:
   - embedart
   - fetchart
   - fromfilename
+  - mbcollection
   - mbsubmit
   - mbsync
+  - missing
+  - play
+  - spotify
   - types
+  - web
 
 types:
   bad_tags: bool
-  # rip_author: str
+  # rip_author:
   rip_ok: bool
 
 convert:
+  # This does not respect the `embedart.maxwidth` setting when used with the
+  # `alternatives` plugin. Instead, we configure ffmpeg to pass through
+  # embedded artwork.
+  embed: false
   format: aac
   formats:
     # http://ffmpeg.org/ffmpeg-codecs.html#aac
     aac:
-      command: ffmpeg -i $source -y -c:v copy -c:a aac -q:a 4 $dest
+      # Higher quality settings seems to cause compatibility issues with
+      # Spotify
+      command: ffmpeg -i $source -y -c:v copy -c:a aac -q:a 2 $dest
       extension: m4a
     # http://ffmpeg.org/ffmpeg-codecs.html#Options-14
     # https://wiki.hydrogenaud.io/index.php?title=Recommended_Ogg_Vorbis
@@ -49,7 +68,18 @@ convert:
 
 edit:
   itemfields: disc track title artist album
-  albumfields: albumartist album
+  albumfields: albumartist album comp
+
+embedart:
+  maxwidth: 1024
+
+mbcollection:
+  # see secrets file
+  auto: yes
+  remove: true
+
+absubmit:
+  auto: true
 
 alternatives:
   rips:
