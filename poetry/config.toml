@@ -1,0 +1,6 @@
+[settings]
+
+[settings.virtualenvs]
+path = "/Users/olle/.local/share/virtualenvs"
+
+[repositories]
