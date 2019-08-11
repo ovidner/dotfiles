@@ -7,9 +7,3 @@ Host *
 Host *.personalkollen.se
   IdentityFile ~/.ssh/keys/olle.personalkollen.se.ed25519
   IdentityFile ~/.ssh/keys/olle.personalkollen.se.ecdsa
-
-Host *.zenterio.lan
-  IdentityFile ~/.ssh/keys/olle.vidner.zenterio.com.rsa
-
-Host git.zenterio.lan
-  User git
