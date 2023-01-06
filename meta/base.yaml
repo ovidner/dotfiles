@@ -1,0 +1,9 @@
+# This will be used for every config
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true

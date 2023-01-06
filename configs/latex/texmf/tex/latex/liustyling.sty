@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{liustyling}[Linköping University styling]
+
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+\RequirePackage{unicode-math}
+
+% TeX Gyre Schola is very similar to Miller and Georgia but has a complete math font, unlike them.
+\setmainfont{TeXGyreSchola}
+\setmathfont{TeXGyreScholaMath}
+\setsansfont{Korolev}
+\setmonofont[
+    Scale=MatchLowercase,
+    % BoldFont=*-SemiBold,
+    % BoldItalicFont=*-SemiBoldItalic
+]{CascadiaCode}
+
+\definecolorset{cmyk/RGB}{liu-}{}{%
+    blue,%
+        0.80,0.0,0.05,0.0,%
+        0,185,231;%
+    teal,%
+        0.6,0.0,0.15,0.0,%
+        23,199,210;%
+    green,%
+        0.9,0.0,0.5,0.0,%
+        0,207,181;%
+    orange,%
+        0.0,0.7,0.7,0.0,%
+        255,100,66;%
+    purple,%
+        0.6,0.55,0.0,0.0,%
+        137,129,211;%
+    yellow,%
+        0.0,0.0,0.9,0.0,%
+        253,239,93;%
+    gray,%
+        0.65,0.45,0.35,0.2,%
+        106,126,145
+}

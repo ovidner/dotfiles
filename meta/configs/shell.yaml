@@ -1,0 +1,6 @@
+- link:
+    ~/.hushlogin: configs/shell/.hushlogin
+
+- shell:
+    # $PWD for these scripts is always the canonical path to the dotfiles root
+    - configs/shell/setup-fish

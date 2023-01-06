@@ -1,18 +1,53 @@
 #!/usr/bin/env bash
 set -ef
 
-# Preemptively asks for sudo and keeps the session for as long as we're running.
-# Credit: https://gist.github.com/cowboy/3118588
-sudo -v -p "We need sudo to perform certain tasks. Please authenticate [$(whoami)]: "
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# https://github.com/anishathalye/dotbot/wiki/Troubleshooting#fix-links-not-successfully-setup-in-git-bash-with-git-for-windows
+export MSYS=winsymlinks:nativestrict
 
-CONFIG="dotbot.yaml"
+# Preemptively asks for sudo (if applicable) and keeps the session for as long
+# as we're running. Credit: https://gist.github.com/cowboy/3118588
+if [ -x "$(command -v sudo)" ]; then
+	sudo -v -p "We need sudo to perform certain tasks. Please authenticate [$(whoami)]: "
+	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+fi
+
+BASE_CONFIG="base"
+CONFIG_SUFFIX=".yaml"
+
+META_DIR="meta"
+CONFIG_DIR="configs"
+PROFILES_DIR="profiles"
+
 DOTBOT_DIR="_vendor/dotbot"
-
 DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cd "${BASEDIR}"
-git submodule update --init --recursive "${DOTBOT_DIR}"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+cd "${BASE_DIR}"
+git submodule update --init --recursive --remote --force "${DOTBOT_DIR}"
+
+PROFILE_FILE="${HOME}/.dotfiles_profile"
+
+if [[ ! -z "$1" ]]; then
+	PROFILE="$1"
+	shift
+elif [[ -f "${PROFILE_FILE}" ]]; then
+  PROFILE="$(cat ${PROFILE_FILE})"
+else
+	echo "Profile not defined or previously installed. Supply a profile to install with 'install <profile>'."
+	exit 1
+fi
+
+while IFS= read -r config; do
+	CONFIGS+=" ${config}"
+done < "${META_DIR}/${PROFILES_DIR}/${PROFILE}"
+
+echo "${PROFILE}" > ${PROFILE_FILE}
+
+echo ${CONFIGS}
+
+for config in ${CONFIGS} ${@}; do
+	echo -e "\nConfigure $config"
+	configFile="$(mktemp)" ; echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}")" > "$configFile"
+	"${BASE_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASE_DIR}" -c "$configFile" ; rm -f "$configFile"
+done

@@ -1,0 +1,18 @@
+[include]
+	path = ~/.gitconfig_common
+
+[core]
+	autocrlf = true
+
+[gpg]
+	# Debugging the Pinentry over SSH? Make sure the gpg-agent.exe is started
+	# locally first.
+	program = gpg
+
+[difftool "code"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

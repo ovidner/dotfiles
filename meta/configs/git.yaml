@@ -1,0 +1,4 @@
+- link:
+      ~/.gitcommitmsg: configs/git/.gitcommitmsg
+      ~/.gitconfig_common: configs/git/.gitconfig_common
+      ~/.gitignore_global: configs/git/.gitignore_global

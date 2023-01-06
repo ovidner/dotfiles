@@ -1,0 +1,18 @@
+Host *
+  IgnoreUnknown UseKeychain
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/keys/olle.vidner.se.ed25519
+  IdentityFile ~/.ssh/keys/olle.vidner.se.rsa
+
+Host *.personalkollen.se
+  IdentityFile ~/.ssh/keys/olle.personalkollen.se.ed25519
+  IdentityFile ~/.ssh/keys/olle.personalkollen.se.ecdsa
+
+Host win03184
+  HostName win03184.ad.liu.se
+  User ollvi09@ad.liu.se
+
+Host win01470
+  HostName win01470.ad.liu.se
+  User ollvi09@ad.liu.se

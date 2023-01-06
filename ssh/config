@@ -1,9 +1,0 @@
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/keys/olle.vidner.se.ed25519
-  IdentityFile ~/.ssh/keys/olle.vidner.se.rsa
-
-Host *.personalkollen.se
-  IdentityFile ~/.ssh/keys/olle.personalkollen.se.ed25519
-  IdentityFile ~/.ssh/keys/olle.personalkollen.se.ecdsa

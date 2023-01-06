@@ -1,0 +1,102 @@
+include:
+  - ~/Music/Library/.beets-secrets.yaml
+
+item_fields:
+  formatprefix: |
+    import pprint
+    pprint.pprint(globals())
+    if format in ["FLAC"]:
+      return "Library (Lossless)"
+    else:
+      return "Library"
+
+directory: ~/Music
+library: ~/Music/Library/beets.db
+paths:
+  default: $formatprefix/$albumartist/$album%aunique{}/$disc-$track $title
+  singleton: $formatprefix/_Singletons/$artist/$title
+  comp: $formatprefix/_Compilations/$album%aunique{}/$disc-$track $title
+
+per_disc_numbering: true
+artist_credit: true
+match:
+  preferred:
+    countries:
+      - SE
+      - DE
+      - US
+      - GB|UK
+    # original_year: true
+
+languages:
+  - en
+  - sv
+
+plugins:
+  - absubmit
+  - acousticbrainz
+  - alternatives
+  - badfiles
+  - chroma
+  - discogs
+  - duplicates
+  - edit
+  - embedart
+  - fetchart
+  - fromfilename
+  - inline
+  - mbcollection
+  - mbsubmit
+  - mbsync
+  - missing
+  - play
+  - spotify
+  - types
+  - web
+
+types:
+  bad_tags: bool
+  # rip_author:
+  rip_ok: bool
+
+convert:
+  # This does not respect the `embedart.maxwidth` setting when used with the
+  # `alternatives` plugin. Instead, we configure ffmpeg to pass through
+  # embedded artwork.
+  embed: false
+  format: aac
+  formats:
+    # http://ffmpeg.org/ffmpeg-codecs.html#aac
+    aac:
+      # Higher quality settings seems to cause compatibility issues with
+      # Spotify
+      command: ffmpeg -i $source -y -c:v copy -c:a aac -q:a 2 $dest
+      extension: m4a
+    # http://ffmpeg.org/ffmpeg-codecs.html#Options-14
+    # https://wiki.hydrogenaud.io/index.php?title=Recommended_Ogg_Vorbis
+    ogg: ffmpeg -i $source -y -c:a libvorbis -q:a 8 $dest
+
+edit:
+  itemfields: disc track title artist album
+  albumfields: albumartist album comp
+
+embedart:
+  maxwidth: 1024
+
+mbcollection:
+  # see secrets file
+  auto: yes
+  remove: true
+
+absubmit:
+  auto: true
+
+alternatives:
+  rips:
+    directory: ../Rips
+    formats: link
+    query: rip_author:'Olle Vidner' rip_ok:true
+  transcodes:
+    directory: Library/_Transcodes
+    formats: aac
+    query: format:flac

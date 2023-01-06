@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -ef
+
+# Don't run if there is a "beet" command
+if ! command -v beet &> /dev/null; then
+    pipx install beets
+fi

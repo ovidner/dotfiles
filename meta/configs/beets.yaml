@@ -1,0 +1,5 @@
+- link:
+    ~/.config/beets/config.yaml: configs/beets/config.yaml
+
+- shell:
+    - configs/beets/install

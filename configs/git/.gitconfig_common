@@ -1,0 +1,22 @@
+[commit]
+	gpgsign = true
+	template = ~/.gitcommitmsg
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = cat
+[diff]
+	mnemonicprefix = true
+	tool = code
+[push]
+	default = current
+[init]
+	defaultBranch = main
+[rebase]
+	autostash = true
+[rerere]
+	autoupdate = true
+	enabled = true
+[user]
+	name = Olle Vidner
+	email = olle@vidner.se
+	signingkey = 3AA3BFA4EBE9893D

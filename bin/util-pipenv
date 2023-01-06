@@ -1,5 +1,0 @@
-#!/bin/sh
-set -eufo pipefail
-export PIPENV_PIPFILE="$HOME/.util-pipenvs/$1/Pipfile"
-shift
-exec pipenv "$@"

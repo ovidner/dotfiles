@@ -1,0 +1,8 @@
+\defaultfontfeatures[Korolev]{
+    % Path = fonts/,
+    % Extension = .otf,
+    UprightFont=* Medium,
+    ItalicFont=* MediumItalic,
+    BoldFont=* Bold,
+    BoldItalicFont=* BoldItalic
+}

@@ -1,0 +1,23 @@
+#!/usr/bin/env fish
+
+set -l current_user (whoami)
+set -l current_shell (finger $current_user | grep 'Shell:*' | cut -f 3 -d ":" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+set -l fish_path (which fish)
+set -l shells_path /etc/shells
+
+if not grep -qF "$fish_path" "$shells_path"
+  echo "Adding $fish_path to $shells_path. Need sudo."
+  echo "$fish_path" | sudo tee -a "$shells_path" > /dev/null
+end
+
+if [ "$current_shell" != "$fish_path" ]
+  echo "Changing shell for $current_user to $fish_path. Need sudo."
+  sudo chsh -s "$fish_path" "$current_user"
+end
+
+if [ ! -f ~/.config/fish/functions/fisher.fish ]
+  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+end
+
+fisher self-update
+fisher add ~/.dotfiles/configs/shell/fisher-plugins/ovidner

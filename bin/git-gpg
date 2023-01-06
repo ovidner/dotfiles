@@ -1,3 +1,0 @@
-#!/bin/sh
-# set --batch and --no-tty to work in GUIs
-exec gpg --batch --no-tty "$@"

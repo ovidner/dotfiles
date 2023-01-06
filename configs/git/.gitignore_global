@@ -1,0 +1,22 @@
+# General Mac/Unix
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# JetBrains
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+~$*.xla
+~$*.xlam
+~$*.xls
+~$*.xlsb
+~$*.xlsm
+~$*.xlsx
+~$*.xlt
+~$*.xltm
+~$*.xltx

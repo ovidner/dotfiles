@@ -1,0 +1,11 @@
+[include]
+	path = ~/.gitconfig_common
+
+[core]
+	autocrlf = input
+
+[gpg]
+	program = gpg
+
+[difftool "code"]
+	cmd = code --wait --diff \"$LOCAL\" \"$REMOTE\"
