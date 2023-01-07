@@ -1,2 +1,8 @@
 - link:
     ~/.latexmkrc: configs/latex/.latexmkrc
+- if-macos:
+    - link:
+        ~/Library/texmf: configs/latex/texmf
+- if-windows:
+    - link:
+        ~/texmf: configs/latex/texmf

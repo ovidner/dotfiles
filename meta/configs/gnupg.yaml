@@ -1,0 +1,8 @@
+- link:
+    ~/.gnupg/gpg.conf: configs/gnupg/gpg.conf
+- if-macos:
+    - link:
+        ~/.gnupg/gpg-agent.conf: configs/gnupg/gpg-agent_mac.conf
+- if-windows:
+    - link:
+        ~/.gnupg/gpg-agent.conf: configs/gnupg/gpg-agent_win.conf

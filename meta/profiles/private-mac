@@ -3,12 +3,10 @@ link-self
 system-mac
 beets
 git
-git-mac
-gnupg-mac
+gnupg
 karabiner
 latex
-latex-mac
-msoffice-mac
-python-mac
+msoffice
+python
 shell
 ssh

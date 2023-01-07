@@ -2,3 +2,9 @@
     ~/.gitcommitmsg: configs/git/.gitcommitmsg
     ~/.gitconfig_common: configs/git/.gitconfig_common
     ~/.gitignore_global: configs/git/.gitignore_global
+- if-macos:
+    - link:
+        ~/.gitconfig: configs/git/.gitconfig_mac
+- if-windows:
+    - link:
+        ~/.gitconfig: configs/git/.gitconfig_win
