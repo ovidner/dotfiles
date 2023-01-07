@@ -25,6 +25,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASE_DIR}"
 git submodule update --init --recursive --remote --force "${DOTBOT_DIR}"
+git -C "${DOTBOT_DIR}" checkout v1.19.0
 
 PROFILE_FILE="${HOME}/.dotfiles_profile"
 
