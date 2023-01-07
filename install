@@ -24,8 +24,8 @@ DOTBOT_BIN="bin/dotbot"
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASE_DIR}"
-git submodule update --init --recursive --remote --force "${DOTBOT_DIR}"
-git -C "${DOTBOT_DIR}" checkout v1.19.0
+git submodule update --init --recursive --remote --force -q "${DOTBOT_DIR}"
+git -C "${DOTBOT_DIR}" checkout -q v1.19.0
 
 PROFILE_FILE="${HOME}/.dotfiles_profile"
 
