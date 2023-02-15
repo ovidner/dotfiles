@@ -24,18 +24,23 @@ push @generated_exts, 'ist', 'xdy';
 $clean_ext .= ' %R.ist %R.xdy';
 
 sub run_makeglossaries {
+  my ($base_name, $path) = fileparse( $_[0] ); #handle -outdir param by splitting path and file, ...
+  pushd $path; # ... cd-ing into folder first, then running makeglossaries ...
+
   if ( $silent ) {
     if ( $windows ) {
-      system("makeglossaries", "-q", $_[0]);
+      system("makeglossaries", "-q", "$base_name");
     } else {
-      system("makeglossaries -q '$_[0]'");
+      system("makeglossaries -q '$base_name'");
     }
   }
   else {
     if ( $windows ) {
-      system("makeglossaries", $_[0]);
+      system("makeglossaries", "$base_name");
     } else {
-      system("makeglossaries '$_[0]'");
+      system("makeglossaries '$base_name'");
     }
   };
+
+  popd; # ... and cd-ing back again
 }
