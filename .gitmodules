@@ -2,3 +2,6 @@
 	path = _vendor/dotbot
 	url = https://github.com/anishathalye/dotbot.git
 	ignore = dirty
+[submodule "_vendor/dotbot-include"]
+	path = _vendor/dotbot-include
+	url = https://gitlab.com/gnfzdz/dotbot-include.git

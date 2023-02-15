@@ -26,6 +26,7 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${BASE_DIR}"
 git submodule update --init --recursive --remote --force -q "${DOTBOT_DIR}"
 git -C "${DOTBOT_DIR}" checkout -q v1.19.0
+git -C _vendor/dotbot-include checkout -q 6943c521252b31799521ffc0f5d8b07685793a80
 
 PROFILE_FILE="${HOME}/.dotfiles_profile"
 
@@ -51,6 +52,6 @@ for config in ${CONFIGS} ${@}; do
 	echo -e "\nConfigure $config"
 	configFile="$(mktemp)"
 	echo -e "$(<"${BASE_DIR}/${META_DIR}/${BASE_CONFIG}${CONFIG_SUFFIX}")\n$(<"${BASE_DIR}/${META_DIR}/${CONFIG_DIR}/${config}${CONFIG_SUFFIX}")" > "$configFile"
-	"${BASE_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" --plugin-dir lib
+	"${BASE_DIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -v -d "${BASE_DIR}" -c "$configFile" --plugin-dir lib --plugin-dir _vendor/dotbot-include
 	rm -f "$configFile"
 done
