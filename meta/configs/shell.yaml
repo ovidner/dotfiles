@@ -1,3 +1,8 @@
+- if-wsl:
+    - shell:
+        - sudo apt install -y fish finger direnv
+        # For en_US locales
+        - sudo apt install -y language-pack-en
 - link:
     ~/.hushlogin: configs/shell/.hushlogin
 

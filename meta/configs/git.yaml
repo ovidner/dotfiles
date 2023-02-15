@@ -2,6 +2,11 @@
     ~/.gitcommitmsg: configs/git/.gitcommitmsg
     ~/.gitconfig_common: configs/git/.gitconfig_common
     ~/.gitignore_global: configs/git/.gitignore_global
+- if-wsl:
+    - shell:
+      - sudo apt install git git-lfs
+    - link:
+        ~/.gitconfig: configs/git/.gitconfig_wsl
 - if-macos:
     - link:
         ~/.gitconfig: configs/git/.gitconfig_mac

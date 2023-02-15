@@ -1,0 +1,9 @@
+[include]
+	path = ~/.gitconfig_common
+
+[core]
+	autocrlf = input
+
+[credential]
+  # Use the Credential Manager from the Windows host
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe

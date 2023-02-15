@@ -1,5 +1,10 @@
 - link:
     ~/.gnupg/gpg.conf: configs/gnupg/gpg.conf
+- if-wsl:
+    - shell:
+        - sudo apt install gnupg
+    - link:
+        ~/.gnupg/gpg-agent.conf: configs/gnupg/gpg-agent_wsl.conf
 - if-macos:
     - link:
         ~/.gnupg/gpg-agent.conf: configs/gnupg/gpg-agent_mac.conf
