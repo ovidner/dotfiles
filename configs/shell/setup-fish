@@ -19,5 +19,5 @@ if [ ! -f ~/.config/fish/functions/fisher.fish ]
   curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 end
 
-fisher self-update
-fisher add ~/.dotfiles/configs/shell/fisher-plugins/ovidner
+fisher update
+fisher install ~/.dotfiles/configs/shell/fisher-plugins/ovidner
