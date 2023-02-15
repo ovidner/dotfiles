@@ -18,3 +18,11 @@ end
 if status --is-interactive
   eval (direnv hook fish)
 end
+
+function storePathForWindowsTerminal --on-variable PWD
+  # Makes duplicate tabs open in the same directory in Windows Terminal
+  # https://learn.microsoft.com/en-us/windows/terminal/tutorials/new-tab-same-directory#fish
+  if test -n "$WT_SESSION"
+    printf "\e]9;9;%s\e\\" (wslpath -w "$PWD")
+  end
+end

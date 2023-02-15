@@ -8,7 +8,7 @@ function fish_right_prompt
   and echo -n (set_color yellow)'['(basename $VIRTUAL_ENV)'] '
 
   test $_status -ne 0
-  and echo -n (set_color red)'⚡︎'$_status' '
+  and echo -n (set_color red)$_status' '
 
   echo -n (set_color brblack)$duration
 end
