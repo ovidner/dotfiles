@@ -5,7 +5,7 @@ from dotbot.dispatcher import Dispatcher
 
 
 class IfOs(dotbot.Plugin):
-    OS_MAP = {"Windows": "if-windows", "Linux": "if-linux", "Darwin": "if-macos"}
+    OS_MAP = {"Windows": "if-windows", "Linux": "if-wsl", "Darwin": "if-macos"}
 
     def can_handle(self, directive):
         return directive in self.OS_MAP.values()
