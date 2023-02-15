@@ -1,0 +1,5 @@
+channels:
+  - conda-forge
+ssl_verify: true
+channel_priority: strict
+solver: libmamba
