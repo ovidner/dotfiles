@@ -5,7 +5,7 @@ set -x EDITOR "code --wait"
 set -x LANG en_US.UTF-8
 set -x LC_ALL en_US.UTF-8
 set -x PIPENV_SHELL_FANCY true
-set -x SHELL /usr/local/bin/fish
+set -x SHELL (which fish)
 set -x VIRTUAL_ENV_DISABLE_PROMPT true
 
 if status --is-login
